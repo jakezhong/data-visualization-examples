@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Sum of Passenger Count for each GEO Region</title>
+		<style>
+			html,body {
+				margin: 0;
+				padding: 0;
+			}
+			#tooltip {
+			  font-weight: 600;
+			  text-shadow: 0px 0px 2px white;
+			  fill: black;
+			  stroke: none;
+			}
+			.neighborhood-tooltip {
+				min-width: 100px;
+				background-color: #fff;
+				border-radius: 3px;
+				box-shadow: rgba(0,0,0,0.2);
+				padding: 10px;
+				font-size: 13px;
+				text-align: center;
+			}
+				
+			#map {
+				background-color: rgba(0,150,200,0.1);
+			}
+			#map path.land {
+			  stroke: none;
+			}
+
+			#map path.neighborhood {
+			  fill: none;
+			  stroke: white;
+			  stroke-width: 3.5px;
+			  pointer-events: none;
+			}
+
+			#map path.street {
+			  fill: none;
+			  stroke: white;
+			  stroke-width: 1px;
+			  pointer-events: none;
+			}
+
+			#map .active {
+			  stroke: #0099ff !important;
+			}
+
+			#map circle.symbol {
+			  fill-opacity: 0.6;
+
+			  stroke: white;
+			}
+			#map circle.active {
+			  fill: #0099ff;
+			  fill-opacity: 0.8;
+			  stroke: #000 !important;
+			}
+			#map a:link, #map a:visited {
+			  color: #444444;
+			}
+
+			#map a:hover, #map a:active {
+			  color: red;
+			}
+			.info-table {
+				width: 400px;
+				padding: 20px;
+				color: #000;
+				font-size: 14px;
+			  	background-color: rgba(0,150,200,0.95);
+			}
+			.info-table th {
+				white-space: nowrap;
+				padding-right: 20px;
+			}
+			.info-table tr {
+				vertical-align: top;
+			}
+			.legend-title {
+				font-size: 16px;
+			}
+			.legend-label {
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="svg-container">
+			<svg width="960" height="600" id="map">
+				<g id="basemap"></g>
+
+				<!-- turn off pointer events for certain groups -->
+				<g id="streets" pointer-events="none"></g>
+				<g id="outline" pointer-events="none"></g>
+
+				<g id="cases"></g>
+				<g id="tooltip" pointer-events="none"></g>
+				<g id="details" pointer-events="none"></g>
+				<g id="legend" pointer-events="none"></g>
+			</svg>
+		</div>
+		
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

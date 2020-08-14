@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Mobility Report Scatterplot Matrix</title>
+	<style>
+		.chart-container {
+			font-size: 14px;
+			font-weight: 300;
+		}
+		.legend-label {
+			font-size: 12px;
+		}
+		.legend-title {
+			font-size: 50px;
+			color: #000;
+			fill: #)00;
+		}
+		.axis,
+		.frame {
+		  shape-rendering: crispEdges;
+		}
+
+		.axis line {
+		  stroke: #ddd;
+		}
+
+		.axis path {
+		  display: none;
+		}
+
+		.cell text {
+		  font-weight: bold;
+		  text-transform: capitalize;
+		  fill: black;
+		}
+
+		.frame {
+		  fill: none;
+		  stroke: #aaa;
+		}
+
+		circle {
+		  fill-opacity: .7;
+		}
+
+		circle.hidden {
+		  fill: #ccc !important;
+		}
+
+		.extent {
+		  fill: #000;
+		  fill-opacity: .125;
+		  stroke: #fff;
+		}	
+	</style>
+	</head>
+	<body>
+		<h3>Mobility Report Scatterplot Matrix</h3>
+		<div class="svg-container">
+			<svg width="960" height="760"></svg>
+		</div>
+		
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

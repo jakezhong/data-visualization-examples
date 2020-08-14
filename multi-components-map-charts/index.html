@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Average Home Price and Count of Home Sales in the Bay Area (2015 - 2020)</title>
+		<style>
+			html, body {
+				font-family: "Roboto", sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+			.svg-container {
+				position: relative;
+				max-width: 1200px;
+				margin: 40px auto;
+				padding: 0 20px;
+			}
+			#map {
+				background: #d5eaff;
+			}
+			.svg-row {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			#panel-trigger {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			#panel-trigger select {
+				display: block;
+				width: 100%;
+				font-size: 12px;
+				height: 30px;
+				line-height: 30px;
+			}
+
+			#panel-close {
+				float: right;
+				margin-bottom: 20px;
+			}
+
+			.city.active {
+				fill: #3a92ff !important;
+			}
+
+			.states .active {
+				display: none;
+			}
+
+			.state-borders {
+				fill: none;
+				stroke: #000;
+				stroke-width: 0.5px;
+				stroke-linejoin: round;
+				stroke-linecap: round;
+				pointer-events: none;
+			}
+
+			.counties {
+				fill: #919191;
+			}
+
+			.county-borders {
+				fill: none;
+				stroke: #fff;
+				stroke-width: 0.2px;
+				stroke-linejoin: round;
+				stroke-linecap: round;
+				pointer-events: none;
+			}
+
+			.detail-info {
+				background-color: rgba(0,0,0,0.8);
+				width: 300px;
+				color: #fff;
+				font-size: 11px;
+				padding: 8px;
+			}
+			.info-table {
+				width: 100%;
+				text-align: left;
+			}
+
+			.info-table th {
+				white-space: nowrap;
+				padding: 2px;
+			}
+
+			.info-table td {
+				white-space: nowrap;
+				padding: 2px;
+			}
+
+			.info-table tr {
+				vertical-align: top;
+			}
+
+			.details {
+				display: none;
+			}
+			@media screen and (max-width: 768px) {
+				.svg-row {
+					display: block;
+					justify-content: space-between;
+				}
+				.svg-col + .svg-col {
+					margin-top: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="svg-container">
+			<h2>Average Home Price and Count of Home Sales in the Bay Area (2015 - 2020)</h2>
+			<div class="svg-row">
+				<div class="svg-col">
+					<svg id="map">
+						<g id="basemap">
+							<g id="us-map">
+								<g id="states"></g>
+								<g id="counties"></g>
+								<g id="cities"></g>
+							</g>
+						</g>
+						<g id="legend" pointer-events="none"></g>
+						<g id="detail-panel" pointer-events="none"></g>
+					</svg>
+				</div>
+				<div class="svg-col">
+					<div id="panel">
+						<div class="general">
+							<div id="panel-trigger">
+								<select>
+									<option value=".bar-price">Bar - Average Price of Homes (2015 - 2020)</option>
+									<option value=".bar-count">Bar - Count of Home Sales (2015 - 2020)</option>
+									<option value=".line-price">Line - Average Price Trend (2015 - 2020)</option>
+									<option value=".line-count">Line - Count of Home Sales Trend (2015 - 2020)</option>
+								</select>
+							</div>
+							<div class="bar-price">
+								<svg id="bar-price"></svg>
+							</div>
+							<div class="bar-count">
+								<svg id="bar-count"></svg>
+							</div>
+							<div class="line-price">
+								<svg id="line-price"></svg>
+							</div>
+							<div class="line-count">
+								<svg id="line-count"></svg>
+							</div>
+						</div>
+						<div class="details">
+							<button id="panel-close" class="btn btn-danger">Close</button>
+							<div id="detail-1">
+								<div class="detail-1-bar-1">
+									<svg id="detail-1-bar-1"></svg>
+								</div>
+								<div class="detail-1-bar-2 space">
+									<svg id="detail-1-bar-2"></svg>
+								</div>
+								<hr class="space">
+								<div class="detail-1-bar-3 space">
+									<svg id="detail-1-line-1"></svg>
+								</div>
+								<div class="detail-1-bar-4 space">
+									<svg id="detail-1-line-2"></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script type="text/javascript" src="https://d3js.org/topojson.v3.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

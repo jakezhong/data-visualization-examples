@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Boarding Area and sum of Passenger Count</title>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				background-color: #030619;
+			}
+			h2 {
+				color: #fff;
+			}
+			.svg-container {
+				margin: 40px;
+			}
+			#tree-container {
+				background-color: #030619;
+				font-size: 0;
+			}
+			.tree-tooltip {
+				min-width: 100px;
+				background-color: #fff;
+				border-radius: 3px;
+				padding: 10px;
+				font-size: 13px;
+				font-weight: 400;
+				fill: black;
+				color: black;
+				stroke: none;
+				text-align: center;
+				border: 1px solid black;
+			}
+			.info-table {
+				background-color: rgba(0, 255, 255, 0.5);
+				width: 400px;
+				color: #000;
+			}
+			.info-table th {
+				white-space: nowrap;
+			}
+			.info-table tr {
+				vertical-align: top;
+			}
+			.legend-title {
+				font-size: 16px;
+			}
+			.legend-label {
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="svg-container">
+			<h2 class="section-title">D3 Hierarchical Tree of Fire department Call Records in Feb 2020 by Neighborhoods and Call Types.</h2>
+			<svg id="tree-container">
+				<g id="tree"></g>
+				<g id="tooltip" pointer-events="none"></g>
+				<g id="legend" pointer-events="none"></g>
+			</svg>
+		</div>
+		
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
