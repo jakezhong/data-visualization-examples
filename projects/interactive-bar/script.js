@@ -98,7 +98,6 @@ function init_bar() {
 	   .attr("x", -100)
 	   .attr("y", 20)
 	   .text("Sum of Number of Emergencies for each Neighborhoods")
-	   .style("font-size", 34)
 	   .style("font-weight", "bold");
 
 	let g = svg
