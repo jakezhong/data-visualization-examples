@@ -369,8 +369,8 @@ svg.call(
 	d3.zoom()
 	.scaleExtent([1, 4])
 	.extent([[0, 0], [width, height]])
-	.on("zoom", zoomed);
-);
+	.on("zoom", zoomed)
+)
 
 function zoomed() {
 	g.basemap.selectAll("path.land").attr('transform', d3.event.transform);

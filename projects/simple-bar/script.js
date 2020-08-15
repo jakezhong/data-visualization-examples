@@ -14,7 +14,9 @@ svg.append("text")
    .attr("transform", "translate(100,0)")
    .attr("x", 50)
    .attr("y", 50)
-   .text("Sum of Passenger Count for each GEO Region");
+   .text("Sum of Passenger Count for each GEO Region")
+   .style("font-size", 34)
+   .style("font-weight", "bold");
 
 // Initialize the x and y scale
 var xScale = d3.scaleBand().range([0, width]).padding(0.4),

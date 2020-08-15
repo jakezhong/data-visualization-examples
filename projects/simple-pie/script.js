@@ -14,7 +14,9 @@ svg.append("g")
    .attr("transform", "translate(" + (width / 2 - 205) + "," + 20 + ")")
    .append("text")
    .text("Boarding Area and sum of Passenger Count")
-   .attr("class", "title");
+   .attr("class", "title")
+   .style("font-size", 34)
+   .style("font-weight", "bold");;
 
 // Append a circle
 var g = svg.append("g")
