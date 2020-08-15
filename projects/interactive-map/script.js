@@ -54,7 +54,7 @@ const g = {
 };
 
 // setup tooltip (shows neighborhood name)
-const tip = g
+let tip = g
 			.tooltip
 			.append("foreignObject")
 			.attr("class", "neighborhood-tooltip")
@@ -67,20 +67,20 @@ const tip = g
 
 // add details widget
 // https://bl.ocks.org/mbostock/1424037
-const details = g.details
+let details = g.details
 				.append("foreignObject")
-				.attr("id", "details")
+				.attr("id", "details-table")
 				.attr("width", width)
 				.attr("height", height)
 				.attr("x", 0)
-				.attr("y", 0);
+				.attr("y", 0)
+				.style("visibility", "hidden");
 
-const body = details
+let body = details
 			.append("xhtml:body")
 			.style("text-align", "left")
 			.style("background", "none")
-			.html("<p>N/A</p>")
-			.style("visibility", "hidden");
+			.html("<p>N/A</p>");
 
 // setup projection
 // https://github.com/d3/d3-geo#geoConicEqualArea
@@ -249,7 +249,7 @@ function drawCases(json) {
 					  return;
 					});
 	
-	// Display the tooltip on hover
+	// Display the detail on hover
 	symbols.on("mouseover", function(d) {
 		d3.select(this).raise();
 		d3.select(this).classed("active", true);
