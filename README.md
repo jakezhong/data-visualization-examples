@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## Welcome to Data Visualization Showcase Created by Jake Zhong
 
-You can use the [editor on GitHub](https://github.com/jakezhong/data-visualization-examples/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This showcase covers a range of data visualization case studies featuring all the data visualization projects I’ve completed so far. They vary from a simple static bar chart to a complex multi-component map.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+These projects are done with Tableau, D3.js and Observablehq. I also provide the dataset that I used and the source code of the project for you and hope they could be helpful if you are seeking such examples.
 
-### Markdown
+If you are looking for any data visualization examples, feel free to download any projects in this repo and play around with them. They cover D3.js map, tree, bar and pie and so on.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you are also interested in the dataset that I used and the narrative about the dataset or want a live review, please also refer to the website(http://datavisualization.jakezhong.com)
 
-```markdown
-Syntax highlighted code block
+### Why do I want to create a data visualization showcase like this?
 
-# Header 1
-## Header 2
-### Header 3
+The biggest reason is that I started to learn data visualization recently and completed plenty of projects that I would really love to share with people about what I’ve done and hear any feedback and comment on how do they look.
 
-- Bulleted
-- List
+### It’s also important to know the story
 
-1. Numbered
-2. List
+Another reason is that I also want to share some good examples with my case study. While I was learning data visualization, it was not too hard to find the visual examples, no matter in Tableau or D3.js. So, technically, this source code of my showcase is doing the same thing, but, what differentiates my showcase to other examples is that I also include my case study. It means that I not only tell you how to build a chart like a bar or a line but also tell why do you use a bar chart over a line chart in such a scenario. Because I think it’s an important concept of data visualization that you are not just throwing out your technical skills, but also try to use them to demonstrate a story by the data.
 
-**Bold** and _Italic_ and `Code` text
+### What did I cover and what are you expecting?
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jakezhong/data-visualization-examples/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The categories of the case study cover Airport passenger data, San Francisco Fire Department data and Zillow Real Estate data and so on. What’s more important, this site will be updated continuously, so kindly let me know what else you are expecting to see here and I will try to plus them later on.
